@@ -9,10 +9,11 @@ stopBtn.disabled = true;
 let timerID = null;
 
 startBtn.addEventListener("click", () => {
+	document.body.style.backgroundColor = getRandomHexColor();
+	startBtn.disabled = true;
+	stopBtn.disabled = false;
 	timerID = setInterval(() => {
-		document.body.style.backgroundColor = getRandomHexColor();
-		stopBtn.disabled = false;
-		startBtn.disabled = true;
+		document.body.style.backgroundColor = getRandomHexColor();	
 	}, 1000)
 })
 
